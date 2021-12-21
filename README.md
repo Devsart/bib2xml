@@ -1,25 +1,20 @@
-# bibtex2word
+# bib2xml - A tool for getting Word formatted XML from Bibtex files
 
-Processes Bibtex files, produces Word Source.xml output
+Processes Bibtex files (.bib), produces Word Bibliography XML (.xml) output
 
-# why?
+# Why not just use the Word tools?
 
-Because I use Word for work, and I prefer to manage citations in Bibtex rather than Word's janky citation manager. I export citations from Google Scholar (or Mendeley) and process them.
+You may already have the BibTex files and can't use Overleaf or prefer to use Word. This tool may be helpful.
 
-# how?
+# How can I use it?
 
-simple usage:
+Using Python3, you can just run the code giving the input and output paths:
 
-    ~/bin/bibtex2word.py -i citations.bib
+    run bibtex2word.py -i bib-example.bib -o bib-example-xml.xml
 
-more advanced usage:
+After getting the XML file, You can go to: 
 
-    ~/bin/bibtex2word.py -i citations.bib \
-       -a "/Users/me/Library/Application Support/Microsoft/Office/Sources.xml" \
-       -o /tmp/Sources.xml
+    Word > References > Manage Sources 
+and then push the XML file to your source document in word.
 
-then copy `/tmp/Sources.xml` into place, restart Word, and poof.
-
-# bugs?
-
-yeah, probably, please send a PR if you find any. or enhancements. 
+The original code can be found at: [Paralax's Repo](https://github.com/paralax/bibtex2word)
